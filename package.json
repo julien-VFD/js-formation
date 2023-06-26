@@ -1,0 +1,11 @@
+{
+  "name": "js-formation",
+  "version": "1.0.0",
+  "description": "Orsys",
+  "scripts": {
+    "start": "npx lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
