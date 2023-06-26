@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
@@ -68,7 +71,81 @@
       </div>
     </nav>
 
-    <article>contenu</article>
+    <article>
+      <div id="editor">
+        <div id="editor-viewer">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpGSkfgVeE-5ZHIVgD8gjfEbMtpHkAYOGT_g&usqp=CAU"
+            alt="tux"
+          />
+        </div>
+        <div id="editor-form">
+          formulaire de saisie
+          <form action="#" name="meme-form">
+            <h2>titre</h2>
+            <input
+              type="text"
+              name="titre"
+              id="meme-titre"
+              placeholder="mandatory"
+            />
+            <hr />
+            <h2>text</h2>
+            <input
+              type="text"
+              name="text"
+              id="meme-text"
+              placeholder="ecrire truc"
+            />
+            <div class="flex-col">
+              <div>
+                <label for="meme-x">x</label><br /><input
+                  type="number"
+                  name="x"
+                  id="meme-x"
+                  placeholder="taille x"
+                />
+              </div>
+              <div>
+                <label for="meme-y">y</label><br /><input
+                  type="number"
+                  name="y"
+                  id="meme-y"
+                  placeholder="taille y"
+                />
+              </div>
+            </div>
+            <hr />
+            <label for="meme-img">images</label>
+            <select name="imageId" id="meme-img">
+              <option value="-1">rien</option>
+              <option value="a">aaa</option>
+              <option value="z">zzz</option>
+              <option value="e">eee</option>
+              <option value="r">rrr</option>
+              <option value="t">ttt</option>
+              <option value="y">yyy</option>
+            </select>
+            <hr />
+            <label for="meme-color">couleur</label>
+            <input type="color" name="color" id="meme-color" />
+            <hr />
+            <label for="meme-underline">underline</label>
+            <input type="checkbox" name="underline" id="meme-underline" />
+
+            <label for="meme-italic">italic</label>
+            <input type="checkbox" name="italic" id="meme-italic" />
+            <hr />
+            <div class="flex-col">
+              <input type="submit" value="okok" class="btn btn-primary"/>
+              <button type="submit">doublon tolérant img</button>
+              <input type="reset" value="koko" class="btn btn-danger"/>
+              <button type="reset">doublon tolérant img</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </article>
     <footer>VFD &copy; 2023</footer>
   </body>
 </html>

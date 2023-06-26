@@ -1,4 +1,42 @@
-body {
-  background-color: grey;
-  font-size: 24px;
+#header-name {
+  color: navy;
+  font-weight: bold;
+  font-size: 32pt;
+  text-shadow: 10px 15px 25px gray;
+  text-decoration: underline;
+}
+#dot {
+  color: crimson;
+  /*font-size: 70px;*/
+}
+#js {
+  color: rgb(22, 199, 140);
+  font-style: italic;
+}
+footer{
+    text-align: center;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+article{
+    flex-grow: 1;
+}
+#editor{
+    display: flex;
+    
+}
+#editor>*:first-child{
+    flex-grow: 1;
+
+}
+#editor>*:first-child>*{
+    height: 100%;
+    width: 100%;
+    
+}
+#editor-form{
+    width: 35%;
 }
