@@ -13,30 +13,44 @@
   color: rgb(22, 199, 140);
   font-style: italic;
 }
-footer{
+footer {
+  text-align: center;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+article {
+  flex-grow: 1;
+}
+#editor {
+  display: flex;
+}
+#editor > *:first-child {
+  flex-grow: 1;
+}
+#editor > *:first-child > * {
+  height: 100%;
+  width: 100%;
+}
+#editor-form {
+  width: 35%;
+  text-align: center;
+}
+.flex-col {
+  display: flex;
+  /* text-align: center; */
+}
+.flex-col > * {
+  text-align: center;
+}
+input[type="number"] {
+  width: 100%;
+}
+input[type="submit"] {
+  margin-right: 50px;
+}
+.center{
     text-align: center;
-}
-body{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-article{
-    flex-grow: 1;
-}
-#editor{
-    display: flex;
-    
-}
-#editor>*:first-child{
-    flex-grow: 1;
-
-}
-#editor>*:first-child>*{
-    height: 100%;
-    width: 100%;
-    
-}
-#editor-form{
-    width: 35%;
 }
