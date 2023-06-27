@@ -1,9 +1,14 @@
+header{
+    display: flex;
+    padding-bottom: 5px;
+}
 #header-name {
   color: navy;
   font-weight: bold;
   font-size: 32pt;
   text-shadow: 10px 15px 25px gray;
   text-decoration: underline;
+  flex-grow: 1;
 }
 #dot {
   color: crimson;
@@ -54,3 +59,4 @@ input[type="submit"] {
 .center{
     text-align: center;
 }
+
