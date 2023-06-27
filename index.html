@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="style/style.css" />
     <script src="/script/Meme.js"></script>
+    <script src="/script/memeForm.js"></script>
     <script src="/script/index.js"></script>
   </head>
   <body>
@@ -144,16 +145,36 @@
                 />
               </div>
             </div>
+            <div class="flex-col">
+                <div>
+                  <label for="meme-font-size">Taille</label><br />
+                  <input
+                    type="number"
+                    name="font-size"
+                    id="meme-font-size"
+                    placeholder="taille police"
+                  />
+                </div>
+                <div>
+                  <label for="meme-font-weight">Poids</label><br />
+                  <input
+                    type="number"
+                    name="font-weight"
+                    id="meme-font-weight"
+                    placeholder="poids police"
+                  />
+                </div>
+              </div>
             <hr />
             <label for="meme-img">images</label>
             <select name="imageId" id="meme-img">
               <option value="-1">rien</option>
-              <option value="a">aaa</option>
+              <option value="https://upload.wikimedia.org/wikipedia/commons/2/22/A_nice_letter_A.svg">aaa</option>
               <option value="z">zzz</option>
               <option value="e">eee</option>
               <option value="r">rrr</option>
               <option value="t">ttt</option>
-              <option value="y">yyy</option>
+              <option value="https://www.svgrepo.com/show/105028/apple.svg">yyy</option>
             </select>
             <hr />
             <label for="meme-color">couleur</label>
@@ -166,7 +187,7 @@
             <input type="checkbox" name="italic" id="meme-italic" />
             <hr />
             <div class="center">
-              <input type="submit" value="okok" class="btn btn-primary" />
+              <input type="submit" value="okok" class="btn btn-primary" id="meme-submit"/>
               <!-- <button type="submit">doublon tolérant img</button> -->
               <input type="reset" value="koko" class="btn btn-danger" />
               <!-- <button type="reset">doublon tolérant img</button> -->
