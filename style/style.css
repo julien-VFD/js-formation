@@ -1,6 +1,6 @@
-header{
-    display: flex;
-    padding-bottom: 5px;
+header {
+  display: flex;
+  padding-bottom: 5px;
 }
 #header-name {
   color: navy;
@@ -10,6 +10,11 @@ header{
   text-decoration: underline;
   flex-grow: 1;
 }
+#theme {
+  color: darkred;
+  padding-right: 20px;
+}
+
 #dot {
   color: crimson;
   /*font-size: 70px;*/
@@ -25,6 +30,16 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+}
+body.dark {
+  background-color: brown !important ;
+  color: aliceblue !important;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+svg.text{
+    font-size: 100;
 }
 article {
   flex-grow: 1;
@@ -56,7 +71,6 @@ input[type="number"] {
 input[type="submit"] {
   margin-right: 50px;
 }
-.center{
-    text-align: center;
+.center {
+  text-align: center;
 }
-
