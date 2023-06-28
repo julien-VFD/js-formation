@@ -9,9 +9,10 @@
       href="node_modules/bootstrap/dist/css/bootstrap.css"
     />
     <link rel="stylesheet" href="style/style.css" />
+    <!-- <script src="/script/value.js"></script>
     <script src="/script/Meme.js"></script>
-    <script src="/script/memeForm.js"></script>
-    <script src="/script/index.js"></script>
+    <script src="/script/memeForm.js"></script> -->
+    <script src="/script/index.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -101,8 +102,19 @@
               xlink:href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Bananas.svg/1280px-Bananas.svg.png"
               x="0"
               y="0"
+              height="100%"
+              width="100%"
             />
-            <text id="memeText" x="100" y="150" style="font-size: 80">
+            <text
+              id="memeText"
+              x="100"
+              y="150"
+              font-size="80"
+              font-weight="500"
+              font-style="italic"
+              text-decoration="underline"
+              fill="#123123"
+            >
               DEMAT BREIZH
             </text>
           </svg>
@@ -146,35 +158,57 @@
               </div>
             </div>
             <div class="flex-col">
-                <div>
-                  <label for="meme-font-size">Taille</label><br />
-                  <input
-                    type="number"
-                    name="font-size"
-                    id="meme-font-size"
-                    placeholder="taille police"
-                  />
-                </div>
-                <div>
-                  <label for="meme-font-weight">Poids</label><br />
-                  <input
-                    type="number"
-                    name="font-weight"
-                    id="meme-font-weight"
-                    placeholder="poids police"
-                  />
-                </div>
+              <div>
+                <label for="meme-font-size">Taille</label><br />
+                <input
+                  type="number"
+                  name="font-size"
+                  id="meme-font-size"
+                  placeholder="taille police"
+                />
               </div>
+              <div>
+                <label for="meme-font-weight">Poids</label><br />
+                <input
+                  type="number"
+                  name="font-weight"
+                  id="meme-font-weight"
+                  placeholder="poids police"
+                />
+              </div>
+            </div>
             <hr />
             <label for="meme-img">images</label>
             <select name="imageId" id="meme-img">
-              <option value="-1">rien</option>
-              <option value="https://upload.wikimedia.org/wikipedia/commons/2/22/A_nice_letter_A.svg">aaa</option>
-              <option value="z">zzz</option>
-              <option value="e">eee</option>
-              <option value="r">rrr</option>
-              <option value="t">ttt</option>
-              <option value="https://www.svgrepo.com/show/105028/apple.svg">yyy</option>
+              <option
+                value="data:image/png;base64,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"
+              >
+                rien
+              </option>
+              <option
+                value="https://upload.wikimedia.org/wikipedia/commons/2/22/A_nice_letter_A.svg"
+              >
+                aaa
+              </option>
+              <option
+                value="https://cdn.worldvectorlogo.com/logos/star-channel-japan-2.svg"
+              >
+                zzz
+              </option>
+              <option
+                value="https://www.impressions-languedoc.eu/2175-thickbox_default/cuisse-de-poulet.jpg"
+              >
+                eee
+              </option>
+              <option value="https://freesvg.org/img/Trollface.png">rrr</option>
+              <option
+                value="https://toppng.com//public/uploads/preview/trolls-poppy-clipart-trolls-png-poppy-transparent-pumpkin-poppy-troll-svg-free-11563082922kpjkanmsl3.png"
+              >
+                ttt
+              </option>
+              <option value="https://www.svgrepo.com/show/105028/apple.svg">
+                yyy
+              </option>
             </select>
             <hr />
             <label for="meme-color">couleur</label>
@@ -187,7 +221,12 @@
             <input type="checkbox" name="italic" id="meme-italic" />
             <hr />
             <div class="center">
-              <input type="submit" value="okok" class="btn btn-primary" id="meme-submit"/>
+              <input
+                type="submit"
+                value="okok"
+                class="btn btn-primary"
+                id="meme-submit"
+              />
               <!-- <button type="submit">doublon tolérant img</button> -->
               <input type="reset" value="koko" class="btn btn-danger" />
               <!-- <button type="reset">doublon tolérant img</button> -->

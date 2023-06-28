@@ -1,4 +1,4 @@
-function Meme(s) {
+export function Meme(s) {
   var title = s;
   this.title = title;
   function changeTitle(t){

@@ -1,3 +1,5 @@
+import { initMemeEditor, loadSelectImage } from "./memeForm.js";
+import { images } from "./value.js";
 var maVar = "bananaaaaaaaaaa";
 var CONSTANTE = Object.freeze({});
 
@@ -8,7 +10,7 @@ var obj = {
     console.log("hello");
   },
   c: function (a) {
-    console.log(a);
+    //console.log(a);
   },
 };
 /**
@@ -16,7 +18,7 @@ var obj = {
  * @param {*} a
  */
 function printA(a) {
-  console.log(a);
+  //console.log(a);
 }
 function init() {
   var currentDate = new Date();
@@ -38,9 +40,11 @@ function colorFooter() {
   footer.style.color = "white";
 }
 document.addEventListener("DOMContentLoaded", function (evt) {
-  console.log(evt);
+  //console.log(evt);
   init();
   colorFooter();
+  initMemeEditor();
+  loadSelectImage(images);
 });
 
 function changetheme(light) {
